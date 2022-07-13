@@ -1,0 +1,19 @@
+{{define "title"}}Snippet #{{.Snippet.ID}}{{end}}
+
+{{define "main"}}
+ {{with .Snippet}}
+ <div class="snippet">
+  <!-- <span>{{"<script>alert('xss attack')</script>"}}</span> -->
+  <div class="metadata">
+   <strong>{{.Title}}</strong>
+   <span>#{{.ID}}</span>
+  </div>
+  <pre><code>{{.Content}}</code></pre>
+  <div class="metadata">
+   <time>Created: {{.Created | humanDate}}</time>
+   <time>Expires: {{humanDate .Expires}}</time>
+  </div>
+ 
+ </div>
+ {{end}}
+{{end}}
