@@ -27,3 +27,26 @@ Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60641 - HTTP/1.1 GET /static/img/logo.p
 Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60642 - HTTP/1.1 GET /
 Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60679 - HTTP/1.1 GET /static/img/logo.png
 Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60642 - HTTP/1.1 GET /static/img/favicon.ico
+-----New Log Session-----
+Time: 07/21/2022 11:01:44, IP: 127.0.0.1:51705 - HTTP/1.1 HEAD /snippet/create
+Time: 07/21/2022 11:01:44, IP: 127.0.0.1:51987 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52085 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52141 - HTTP/1.1 GET /
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52141 - HTTP/1.1 GET /
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52166 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52141 - HTTP/1.1 GET /static/css/main.css
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52141 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52141 - HTTP/1.1 GET /static/img/favicon.ico
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52407 - HTTP/1.1 GET /snippet/view
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52420 - HTTP/1.1 GET /snippet/view/1
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52429 - HTTP/1.1 GET /snippet/view/5
+Time: 07/21/2022 11:03:36, IP: 127.0.0.1:52527 - HTTP/1.1 GET /snippet/view/99
+-----New Log Session-----
+Time: 07/21/2022 11:06:21, IP: 127.0.0.1:52794 - HTTP/1.1 GET /snippet/view/99
+Time: 07/21/2022 11:06:21, IP: 127.0.0.1:52811 - HTTP/1.1 GET /snippet/views
+Time: 07/21/2022 11:06:21, IP: 127.0.0.1:52824 - HTTP/1.1 GET /snippet/view/99
+-----New Log Session-----
+Time: 07/21/2022 11:09:32, IP: 127.0.0.1:53602 - HTTP/1.1 GET /snippet/view/99
+-----New Log Session-----
+Time: 07/21/2022 11:09:58, IP: 127.0.0.1:53759 - HTTP/1.1 GET /snippet/view/99

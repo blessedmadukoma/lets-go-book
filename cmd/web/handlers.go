@@ -6,14 +6,16 @@ import (
 	"net/http"
 	"snippetbox/internal/models"
 	"strconv"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 func (log *application) home(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/" {
-		// http.NotFound(w, r)
-		log.notFound(w)
-		return
-	}
+	// if r.URL.Path != "/" {
+	// 	// http.NotFound(w, r)
+	// 	log.notFound(w)
+	// 	return
+	// }
 
 	snippets, err := log.snippets.Latest()
 	if err != nil {
@@ -32,7 +34,8 @@ func (log *application) home(w http.ResponseWriter, r *http.Request) {
 }
 
 func (log *application) snippetView(w http.ResponseWriter, r *http.Request) {
-	id, err := strconv.Atoi(r.URL.Query().Get("id"))
+	params := httprouter.ParamsFromContext(r.Context())
+	id, err := strconv.Atoi(params.ByName("id"))
 	if err != nil || id < 1 {
 		// http.NotFound(w, r)
 		log.notFound(w)
@@ -49,10 +52,6 @@ func (log *application) snippetView(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// data := &templateData{
-	// 	Snippet: snippet,
-	// }
-
 	data := log.newTemplateData(r)
 	data.Snippet = snippet
 
@@ -61,6 +60,10 @@ func (log *application) snippetView(w http.ResponseWriter, r *http.Request) {
 }
 
 func (log *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Display the form for creating a new snippet...\n"))
+}
+
+func (log *application) snippetCreatePost(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		w.Header().Set("Allow", "POST")
 		w.Header().Set("Content-Type", "application/json")
@@ -77,5 +80,5 @@ func (log *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.serverError(w, err)
 	}
-	http.Redirect(w, r, fmt.Sprintf("/snippet/view?id=%d", id), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/snippet/view%d", id), http.StatusSeeOther)
 }
