@@ -1,0 +1,29 @@
+Time: 07/21/2022 00:22:34, IP: 127.0.0.1:59075 - HTTP/1.1 GET /
+Time: 07/21/2022 00:22:34, IP: 127.0.0.1:59075 - HTTP/1.1 GET /static/css/main.css
+Time: 07/21/2022 00:22:34, IP: 127.0.0.1:59086 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 00:22:34, IP: 127.0.0.1:59075 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 00:22:34, IP: 127.0.0.1:59075 - HTTP/1.1 GET /static/img/favicon.ico
+Time: 07/21/2022 00:26:20, IP: 127.0.0.1:60069 - HTTP/1.1 GET /
+Time: 07/21/2022 00:26:20, IP: 127.0.0.1:60078 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 00:26:20, IP: 127.0.0.1:60069 - HTTP/1.1 GET /static/css/main.css
+Time: 07/21/2022 00:26:20, IP: 127.0.0.1:60069 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 00:26:20, IP: 127.0.0.1:60069 - HTTP/1.1 GET /static/img/favicon.ico
+-----
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /static/css/main.css
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60336 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /static/img/favicon.ico
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60520 - HTTP/1.1 GET /
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60520 - HTTP/1.1 GET /static/css/main.css
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60520 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60523 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60336 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 00:27:32, IP: 127.0.0.1:60323 - HTTP/1.1 GET /static/css/main.css
+-----
+Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60641 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60642 - HTTP/1.1 GET /
+Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60679 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 00:28:20, IP: 127.0.0.1:60642 - HTTP/1.1 GET /static/img/favicon.ico
