@@ -12,6 +12,7 @@ type templateData struct {
 	CurrentYear int
 	Snippet     *models.Snippet
 	Snippets    []*models.Snippet
+	Form        any
 }
 
 // Parse current year in all the pages: this can be equivalent to parsing user profile picture or details after log in on all the pages

@@ -1,0 +1,36 @@
+-----New Log Session-----
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49753 - HTTP/1.1 GET /
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49753 - HTTP/1.1 GET /static/css/main.css
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49762 - HTTP/1.1 GET /static/js/main.js
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49753 - HTTP/1.1 GET /static/img/logo.png
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49753 - HTTP/1.1 GET /static/img/favicon.ico
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49753 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 22:52:19, IP: 127.0.0.1:49753 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+Time: 07/21/2022 22:57:21, IP: 127.0.0.1:49865 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+Time: 07/21/2022 23:12:37, IP: 127.0.0.1:50051 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:12:37, IP: 127.0.0.1:50051 - HTTP/1.1 POST /snippet/create
+Time: 07/21/2022 23:12:37, IP: 127.0.0.1:50051 - HTTP/1.1 GET /snippet/view5
+Time: 07/21/2022 23:12:37, IP: 127.0.0.1:50051 - HTTP/1.1 GET /favicon.ico
+Time: 07/21/2022 23:12:37, IP: 127.0.0.1:50051 - HTTP/1.1 GET /snippet/view/5
+-----New Log Session-----
+Time: 07/21/2022 23:23:25, IP: 127.0.0.1:50183 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:23:25, IP: 127.0.0.1:50183 - HTTP/1.1 POST /snippet/create
+Time: 07/21/2022 23:23:25, IP: 127.0.0.1:50252 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+Time: 07/21/2022 23:32:30, IP: 127.0.0.1:50265 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+-----New Log Session-----
+Time: 07/21/2022 23:39:08, IP: 127.0.0.1:50313 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:39:08, IP: 127.0.0.1:50313 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:39:08, IP: 127.0.0.1:50313 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:39:08, IP: 127.0.0.1:50313 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:39:08, IP: 127.0.0.1:50313 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+Time: 07/21/2022 23:39:36, IP: 127.0.0.1:50318 - HTTP/1.1 GET /snippet/create
+-----New Log Session-----
+Time: 07/21/2022 23:41:22, IP: 127.0.0.1:50328 - HTTP/1.1 GET /snippet/create
+Time: 07/21/2022 23:41:22, IP: 127.0.0.1:50328 - HTTP/1.1 POST /snippet/create
+Time: 07/21/2022 23:41:22, IP: 127.0.0.1:50328 - HTTP/1.1 POST /snippet/create
+Time: 07/21/2022 23:41:22, IP: 127.0.0.1:50328 - HTTP/1.1 POST /snippet/create
