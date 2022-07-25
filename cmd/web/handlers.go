@@ -61,10 +61,10 @@ func (log *application) snippetView(w http.ResponseWriter, r *http.Request) {
 }
 
 type snippetCreateForm struct {
-	Title   string
-	Content string
-	Expires int
-	validator.Validator
+	Title               string
+	Content             string
+	Expires             int
+	validator.Validator `form:"-"`
 }
 
 func (log *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
@@ -77,33 +77,15 @@ func (log *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
 }
 
 func (log *application) snippetCreatePost(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		w.Header().Set("Allow", "POST")
-		w.Header().Set("Content-Type", "application/json")
-		// http.Error(w, `{"Message": "Method not allowed!"}`, http.StatusMethodNotAllowed)
-		log.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
+	var form snippetCreateForm
 
-	err := r.ParseForm()
+	err := log.decodePostForm(r, &form)
 	if err != nil {
 		log.clientError(w, http.StatusBadRequest)
 		return
 	}
 
 	// fmt.Println("Postform map values:", r.PostForm)
-
-	expires, err := strconv.Atoi(r.PostForm.Get("expires"))
-	if err != nil {
-		log.clientError(w, http.StatusBadRequest)
-		return
-	}
-
-	form := snippetCreateForm{
-		Title:   r.PostForm.Get("title"),
-		Content: r.PostForm.Get("content"),
-		Expires: expires,
-	}
 
 	form.CheckField(validator.NotBlank(form.Title), "title", "This title field cannot be blank!")
 	form.CheckField(validator.MaxChars(form.Title, 100), "title", "This title field cannot be more than 100 characters long!")
