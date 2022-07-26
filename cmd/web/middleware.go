@@ -7,12 +7,7 @@ import (
 	"time"
 )
 
-const (
-	DDMMYYYYhhmmss = "01/02/2006 15:04:05"
-	DDMMYYYY = "01/02/2006"
-	hhmm = "15:04"
-)
-var current_time = time.Now().Local().Format(DDMMYYYYhhmmss)
+var current_time = time.Now().Local().Format("01/02/2006 15:04:05")
 
 func secureHeaders(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {

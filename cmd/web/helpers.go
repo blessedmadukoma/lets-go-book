@@ -12,7 +12,7 @@ import (
 
 func (log *application) serverError(w http.ResponseWriter, err error) {
 	trace := fmt.Sprintf("%s\n%s", err.Error(), debug.Stack())
-	log.errorLog.Output(2, trace)
+	_ = log.errorLog.Output(2, trace)
 
 	http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 }
@@ -44,7 +44,13 @@ func (log *application) render(w http.ResponseWriter, status int, page string, d
 
 	w.WriteHeader(status)
 
-	buf.WriteTo(w)
+	_, err = buf.WriteTo(w)
+	if err != nil {
+		// error buf writing
+		log.serverError(w, err)
+		return
+	}
+	
 }
 
 func (log *application) decodePostForm(r *http.Request, dst any) error {
