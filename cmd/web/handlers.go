@@ -88,8 +88,21 @@ func (log *application) snippetCreatePost(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	// fmt.Println("Postform map values:", r.PostForm)
-	fmt.Printf("Title: %s\n", form.Title)
+	for i, v := range r.PostForm {
+		for _, val := range v {
+			switch i {
+			case "title":
+				form.Title = val
+			case "content":
+				form.Content = val
+			case "expires":
+				form.Expires, _ = strconv.Atoi(val)
+			default:
+				log.errorLog.Fatalln("Could not store the form values!")
+			}
+		}
+	}
+	// fmt.Printf("Form: %v\n", form)
 
 	form.CheckField(validator.NotBlank(form.Title), "title", "This title field cannot be blank!")
 	form.CheckField(validator.MaxChars(form.Title, 100), "title", "This title field cannot be more than 100 characters long!")

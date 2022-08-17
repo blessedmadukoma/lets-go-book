@@ -1,7 +1,7 @@
 {{define "title"}}Create a New Snippet{{end}}
 
 {{define "main"}}
-<form action="/snippet/create" method="post">
+<form action="/snippet/create" method="POST">
  <div>
   <label>Title:</label>
   {{with .Form.FieldErrors.title}}
@@ -29,4 +29,4 @@
   <input type="submit" value="Publish snippet">
  </div>
 </form>
-{{end}} 
+{{end}}

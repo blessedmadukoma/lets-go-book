@@ -58,6 +58,9 @@ func (log *application) decodePostForm(r *http.Request, dst any) error {
 	if err != nil {
 		return err
 	}
+	// fmt.Println(r.FormValue("title"))
+	// fmt.Println("Post form: ", r.PostForm)
+	// fmt.Println("Just form: ", r.Form)
 
 	err = log.formDecoder.Decode(dst, r.PostForm)
 	if err != nil {
