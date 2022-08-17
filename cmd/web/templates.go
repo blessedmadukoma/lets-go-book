@@ -13,12 +13,14 @@ type templateData struct {
 	Snippet     *models.Snippet
 	Snippets    []*models.Snippet
 	Form        any
+	Flash       string
 }
 
 // Parse current year in all the pages: this can be equivalent to parsing user profile picture or details after log in on all the pages
 func (log *application) newTemplateData(r *http.Request) *templateData {
 	return &templateData{
 		CurrentYear: time.Now().Year(),
+		Flash:       log.sessionManager.PopString(r.Context(), "flash"),
 	}
 }
 

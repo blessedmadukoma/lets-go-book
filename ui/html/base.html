@@ -19,6 +19,9 @@
  {{ template "nav" .}}
 
  <main>
+  {{with .Flash}}
+  <div class="Flash">{{.}}</div>
+  {{end}}
   {{ template "main" .}}
  </main>
 
