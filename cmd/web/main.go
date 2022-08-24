@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/tls"
 	"database/sql"
 	"flag"
 	"html/template"
@@ -67,6 +68,9 @@ func main() {
 	sessionManager.Store = mysqlstore.New(db)
 	sessionManager.Lifetime = 12 * time.Hour
 
+	// To make sure cookie is sent only over HTTPS connection
+	sessionManager.Cookie.Secure = true
+
 	app := &application{
 		errorLog:       errorLog,
 		infoLog:        infoLog,
@@ -76,16 +80,27 @@ func main() {
 		sessionManager: sessionManager,
 	}
 
+	tlsConfig := &tls.Config{
+		PreferServerCipherSuites: true,
+		CurvePreferences:         []tls.CurveID{tls.X25519, tls.CurveP256},
+	}
+
 	router := app.routes()
 
 	srv := &http.Server{
-		Addr:     *addr,
-		ErrorLog: errorLog,
-		Handler:  router,
+		Addr:      *addr,
+		ErrorLog:  errorLog,
+		Handler:   router,
+		TLSConfig: tlsConfig,
+		// Add Idle, Read and Write timeouts to the server
+		IdleTimeout:  time.Minute,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
 	}
 
 	infoLog.Printf("Starting server on %s\n", *addr)
-	err = srv.ListenAndServe()
+	// err = srv.ListenAndServe()
+	err = srv.ListenAndServeTLS("./tls/cert.pem", "./tls/key.pem")
 	if err != nil {
 		log.Fatal(err)
 	}
