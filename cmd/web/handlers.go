@@ -11,16 +11,16 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-func (log *application) home(w http.ResponseWriter, r *http.Request) {
+func (app *application) home(w http.ResponseWriter, r *http.Request) {
 	// if r.URL.Path != "/" {
 	// 	// http.NotFound(w, r)
-	// 	log.notFound(w)
+	// 	app.notFound(w)
 	// 	return
 	// }
 
-	snippets, err := log.snippets.Latest()
+	snippets, err := app.snippets.Latest()
 	if err != nil {
-		log.serverError(w, err)
+		app.serverError(w, err)
 		return
 	}
 
@@ -28,38 +28,38 @@ func (log *application) home(w http.ResponseWriter, r *http.Request) {
 	// 	Snippets: snippets,
 	// }
 
-	data := log.newTemplateData(r)
+	data := app.newTemplateData(r)
 	data.Snippets = snippets
 
-	log.render(w, http.StatusOK, "home.html", data)
+	app.render(w, http.StatusOK, "home.html", data)
 }
 
-func (log *application) snippetView(w http.ResponseWriter, r *http.Request) {
+func (app *application) snippetView(w http.ResponseWriter, r *http.Request) {
 	params := httprouter.ParamsFromContext(r.Context())
 	id, err := strconv.Atoi(params.ByName("id"))
 	if err != nil || id < 1 {
 		// http.NotFound(w, r)
-		log.notFound(w)
+		app.notFound(w)
 		return
 	}
 
-	snippet, err := log.snippets.Get(id)
+	snippet, err := app.snippets.Get(id)
 	if err != nil {
 		if errors.Is(err, models.ErrNoRecord) {
-			log.notFound(w)
+			app.notFound(w)
 		} else {
-			log.serverError(w, err)
+			app.serverError(w, err)
 		}
 		return
 	}
 
-	// flash := log.sessionManager.PopString(r.Context(), "flash")
+	// flash := app.sessionManager.PopString(r.Context(), "flash")
 
-	data := log.newTemplateData(r)
+	data := app.newTemplateData(r)
 	data.Snippet = snippet
 	// data.Flash = flash
 
-	log.render(w, http.StatusOK, "view.html", data)
+	app.render(w, http.StatusOK, "view.html", data)
 
 }
 
@@ -70,21 +70,21 @@ type snippetCreateForm struct {
 	validator.Validator `form:"-"`
 }
 
-func (log *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
-	data := log.newTemplateData(r)
+func (app *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
+	data := app.newTemplateData(r)
 
 	data.Form = snippetCreateForm{
 		Expires: 365,
 	}
-	log.render(w, http.StatusOK, "create.html", data)
+	app.render(w, http.StatusOK, "create.html", data)
 }
 
-func (log *application) snippetCreatePost(w http.ResponseWriter, r *http.Request) {
+func (app *application) snippetCreatePost(w http.ResponseWriter, r *http.Request) {
 	var form snippetCreateForm
 
-	err := log.decodePostForm(r, &form)
+	err := app.decodePostForm(r, &form)
 	if err != nil {
-		log.clientError(w, http.StatusBadRequest)
+		app.clientError(w, http.StatusBadRequest)
 		return
 	}
 
@@ -98,7 +98,7 @@ func (log *application) snippetCreatePost(w http.ResponseWriter, r *http.Request
 			case "expires":
 				form.Expires, _ = strconv.Atoi(val)
 			default:
-				log.errorLog.Fatalln("Could not store the form values!")
+				app.errorLog.Fatalln("Could not store the form values!")
 			}
 		}
 	}
@@ -110,17 +110,37 @@ func (log *application) snippetCreatePost(w http.ResponseWriter, r *http.Request
 	form.CheckField(validator.PermittedInt(form.Expires, 1, 7, 365), "expires", "This expires field must equal 1, 7 or 365")
 
 	if !form.Valid() {
-		data := log.newTemplateData(r)
+		data := app.newTemplateData(r)
 		data.Form = form
-		log.render(w, http.StatusUnprocessableEntity, "create.html", data)
+		app.render(w, http.StatusUnprocessableEntity, "create.html", data)
 		return
 	}
 
-	id, err := log.snippets.Insert(form.Title, form.Content, form.Expires)
+	id, err := app.snippets.Insert(form.Title, form.Content, form.Expires)
 	if err != nil {
-		log.serverError(w, err)
+		app.serverError(w, err)
 	}
 
-	log.sessionManager.Put(r.Context(), "flash", "Snippet successfully created!")
+	app.sessionManager.Put(r.Context(), "flash", "Snippet successfully created!")
 	http.Redirect(w, r, fmt.Sprintf("/snippet/view/%d", id), http.StatusSeeOther)
+}
+
+func (app *application) userSignup(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Display a HTML form for signing up a new user...")
+}
+
+func (app *application) userSignupPost(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Create a new user...")
+}
+
+func (app *application) userLogin(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Display a form for logging in a user...")
+}
+
+func (app *application) userLoginPost(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Authenticate and login the user...")
+}
+
+func (app *application) userLogoutPost(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Logout the user...")
 }

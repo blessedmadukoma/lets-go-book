@@ -22,7 +22,7 @@ func secureHeaders(next http.Handler) http.Handler {
 }
 
 // --log: Check the log of each request
-func (log *application) logRequest(next http.Handler) http.Handler {
+func (app *application) logRequest(next http.Handler) http.Handler {
 
 	// Open the log file
 	f, err := os.OpenFile("log.txt", os.O_APPEND|os.O_WRONLY, 0644)
@@ -34,7 +34,7 @@ func (log *application) logRequest(next http.Handler) http.Handler {
 	_, _ = fmt.Fprintln(f, "-----New Log Session-----")
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.infoLog.Printf("IP: %s - %s %s %s", r.RemoteAddr, r.Proto, r.Method, r.URL.RequestURI())
+		app.infoLog.Printf("IP: %s - %s %s %s", r.RemoteAddr, r.Proto, r.Method, r.URL.RequestURI())
 
 		// newLog := log.New(os.Stdout, "INFO:\t", dateLog.Ldate|dateLog.Ltime)
 
@@ -50,12 +50,12 @@ func (log *application) logRequest(next http.Handler) http.Handler {
 	})
 }
 
-func (log *application) recoverPanic(next http.Handler) http.Handler {
+func (app *application) recoverPanic(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		defer func() {
 			if err := recover(); err != nil {
 				w.Header().Set("Connection", "Close")
-				log.serverError(w, fmt.Errorf("%s", err))
+				app.serverError(w, fmt.Errorf("%s", err))
 			}
 		}()
 
