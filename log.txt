@@ -157,3 +157,12 @@ Time: 08/24/2022 13:21:22, IP: 127.0.0.1:50032 - HTTP/2.0 GET /snippet/create
 Time: 08/24/2022 13:21:22, IP: 127.0.0.1:50032 - HTTP/2.0 POST /snippet/create
 Time: 08/24/2022 13:21:22, IP: 127.0.0.1:50032 - HTTP/2.0 GET /snippet/view/7
 Time: 08/24/2022 13:21:22, IP: 127.0.0.1:50201 - HTTP/2.0 GET /
+-----New Log Session-----
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /user/signup
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /favicon.ico
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /static/css/main.css
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /static/js/main.js
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64364 - HTTP/2.0 GET /static/js/main.js
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /static/img/favicon.ico
