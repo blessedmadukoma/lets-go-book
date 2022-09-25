@@ -167,3 +167,15 @@ Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64364 - HTTP/2.0 GET /static/js/main.js
 Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /static/img/logo.png
 Time: 09/24/2022 23:12:38, IP: 127.0.0.1:64361 - HTTP/2.0 GET /static/img/favicon.ico
 -----New Log Session-----
+-----New Log Session-----
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/css/main.css
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/js/main.js
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /user/signup
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /user/signup
+Time: 09/25/2022 20:19:18, IP: 127.0.0.1:56797 - HTTP/2.0 GET /static/img/favicon.ico
