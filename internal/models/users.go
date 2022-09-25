@@ -28,5 +28,3 @@ func (m *UserModel) Authenticate(name, email, password string) (int, error) {
 func (m *UserModel) Exists(id int) (bool, error) {
 	return false, nil
 }
-
-// Created users table with specified columns, added user struct and the usermodel struct to interact with the database, created errors for invalid credentials and duplicate email, addeded users field to application struct and to the application dependencies
