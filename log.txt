@@ -209,3 +209,30 @@ Time: 09/25/2022 22:50:08, IP: 127.0.0.1:57807 - HTTP/2.0 GET /static/css/main.c
 Time: 09/25/2022 22:50:08, IP: 127.0.0.1:57807 - HTTP/2.0 GET /static/js/main.js
 Time: 09/25/2022 22:50:08, IP: 127.0.0.1:57807 - HTTP/2.0 GET /static/img/logo.png
 Time: 09/25/2022 22:50:08, IP: 127.0.0.1:57807 - HTTP/2.0 GET /static/img/favicon.ico
+-----New Log Session-----
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 POST /user/signup
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 GET /static/js/main.js
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 POST /user/signup
+Time: 09/26/2022 08:47:26, IP: 127.0.0.1:58684 - HTTP/2.0 GET /static/img/favicon.ico
+-----New Log Session-----
+Time: 09/26/2022 09:04:56, IP: 127.0.0.1:58803 - HTTP/2.0 POST /user/signup
+-----New Log Session-----
+Time: 09/26/2022 09:05:50, IP: 127.0.0.1:58812 - HTTP/2.0 POST /user/signup
+Time: 09/26/2022 09:05:50, IP: 127.0.0.1:58812 - HTTP/2.0 GET /user/login
+-----New Log Session-----
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 POST /user/signup
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/js/main.js
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /user/login
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 POST /user/signup
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/js/main.js
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 POST /user/signup
+Time: 09/26/2022 09:06:49, IP: 127.0.0.1:58823 - HTTP/2.0 GET /static/img/favicon.ico
