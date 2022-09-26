@@ -21,5 +21,5 @@
    - created an isAuthenticated method to return a boolean value if a user is logged in or not
    - added an IsAuthenticated boolean field to the templateData struct
    - updated the nav file to show specific info if isAuthenticated()
-   - added middleware to redirect an unauthenticated user who visits /snippet/create. Set the "Cache-Control: no-store" so pages that require authentication are not stored in users browser cache
+   - added middleware to redirect an unauthenticated user who visits /snippet/create. Set the \"Cache-Control: no-store\" so pages that require authentication are not stored in users browser cache
    - updated the routes that need to be protected
