@@ -11,4 +11,5 @@
    - created and updated a login.html file
    - created a userLoginForm struct and updated the userLogin method to parse the login.html file
    
-   - 
+   **Verifying the user details**
+   - updated the Authenticate method to check if a user has valid credentials
