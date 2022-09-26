@@ -340,3 +340,23 @@ Time: 09/26/2022 18:29:50, IP: 127.0.0.1:50322 - HTTP/2.0 POST /user/logout
 Time: 09/26/2022 18:29:50, IP: 127.0.0.1:50322 - HTTP/2.0 GET /
 Time: 09/26/2022 18:29:50, IP: 127.0.0.1:50322 - HTTP/2.0 GET /static/css/main.css
 Time: 09/26/2022 18:29:50, IP: 127.0.0.1:50322 - HTTP/2.0 GET /static/img/favicon.ico
+-----New Log Session-----
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /user/login
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 POST /user/login
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /snippet/create
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 POST /user/logout
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 18:40:27, IP: 127.0.0.1:50586 - HTTP/2.0 GET /static/img/favicon.ico
+-----New Log Session-----
+Time: 09/26/2022 18:55:01, IP: 127.0.0.1:51051 - HTTP/2.0 GET /snippet/create
+Time: 09/26/2022 18:55:01, IP: 127.0.0.1:51051 - HTTP/2.0 GET /user/login
+Time: 09/26/2022 18:55:01, IP: 127.0.0.1:51051 - HTTP/2.0 GET /static/css/main.css
+Time: 09/26/2022 18:55:01, IP: 127.0.0.1:51051 - HTTP/2.0 GET /static/img/favicon.ico

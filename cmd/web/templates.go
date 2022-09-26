@@ -9,11 +9,12 @@ import (
 )
 
 type templateData struct {
-	CurrentYear int
-	Snippet     *models.Snippet
-	Snippets    []*models.Snippet
-	Form        any
-	Flash       string
+	Snippets        []*models.Snippet
+	Snippet         *models.Snippet
+	Form            any
+	Flash           string
+	CurrentYear     int
+	IsAuthenticated bool
 }
 
 // Parse current year in all the pages: this can be equivalent to parsing user profile picture or details after log in on all the pages
@@ -21,6 +22,7 @@ func (app *application) newTemplateData(r *http.Request) *templateData {
 	return &templateData{
 		CurrentYear: time.Now().Year(),
 		Flash:       app.sessionManager.PopString(r.Context(), "flash"),
+		IsAuthenticated: app.isAuthenticated(r),
 	}
 }
 
