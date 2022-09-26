@@ -8,17 +8,18 @@ import (
 
 type Validator struct {
 	FieldErrors map[string]string
+	NonFieldErrors []string
 }
 
 // EmailRX allows us perform sanity checks using regex, and stores the compiled *regexp.Regexp which is more performant that re-parsing the pattern each time we need it
 var EmailRX = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
 
-// Valid checks if there are any errors (i.e. if FieldErrors are empty)
+// Valid checks if there are any errors (i.e. if FieldErrors and NonFieldErrors are empty)
 func (v *Validator) Valid() bool {
-	return len(v.FieldErrors) == 0
+	return len(v.NonFieldErrors) == 0 && len(v.FieldErrors) == 0
 }
 
-// AddFieldError adds a field error
+// AddFieldError adds a form field error
 func (v *Validator) AddFieldError(key, message string) {
 	// if map wasn't initialized, initialize
 	if v.FieldErrors == nil {
@@ -28,6 +29,11 @@ func (v *Validator) AddFieldError(key, message string) {
 	if _, exists := v.FieldErrors[key]; !exists {
 		v.FieldErrors[key] = message
 	}
+}
+
+// AddNonFieldError adds a non form field error to the slice
+func (v *Validator) AddNonFieldError(message string) {
+	v.NonFieldErrors = append(v.NonFieldErrors, message)
 }
 
 // CheckField checks if a field is false and adds a field error
