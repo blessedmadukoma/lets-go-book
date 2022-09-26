@@ -13,3 +13,4 @@
    
    **Verifying the user details**
    - updated the Authenticate method to check if a user has valid credentials
+   - updated userLoginPost method to log in a valid user and return errors for invalid users

@@ -199,10 +199,6 @@ func (app *application) userLogin(w http.ResponseWriter, r *http.Request) {
 }
 
 func (app *application) userLoginPost(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Authenticate and login the user...")
-}
-
-func (app *application) userLogoutPost(w http.ResponseWriter, r *http.Request) {
 	var form userLoginForm
 
 	err := app.decodePostForm(r, &form)
@@ -233,7 +229,7 @@ func (app *application) userLogoutPost(w http.ResponseWriter, r *http.Request) {
 		} else {
 			app.serverError(w, err)
 		}
-		
+
 		return
 	}
 
@@ -246,4 +242,8 @@ func (app *application) userLogoutPost(w http.ResponseWriter, r *http.Request) {
 	app.sessionManager.Put(r.Context(), "authenticatedUserID", id)
 
 	http.Redirect(w, r, "/snippet/create", http.StatusSeeOther)
+}
+
+func (app *application) userLogoutPost(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Logout the user...")
 }
