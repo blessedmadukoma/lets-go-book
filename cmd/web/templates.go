@@ -2,7 +2,6 @@ package main
 
 import (
 	"html/template"
-	"net/http"
 	"path/filepath"
 	"snippetbox/internal/models"
 	"time"
@@ -15,15 +14,7 @@ type templateData struct {
 	Flash           string
 	CurrentYear     int
 	IsAuthenticated bool
-}
-
-// Parse current year in all the pages: this can be equivalent to parsing user profile picture or details after log in on all the pages
-func (app *application) newTemplateData(r *http.Request) *templateData {
-	return &templateData{
-		CurrentYear: time.Now().Year(),
-		Flash:       app.sessionManager.PopString(r.Context(), "flash"),
-		IsAuthenticated: app.isAuthenticated(r),
-	}
+	CSRFToken       string
 }
 
 // Adding human readable date instead of the UTC 0000 old vibe

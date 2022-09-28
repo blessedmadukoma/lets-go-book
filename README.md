@@ -23,3 +23,9 @@
    - updated the nav file to show specific info if isAuthenticated()
    - added middleware to redirect an unauthenticated user who visits /snippet/create. Set the \"Cache-Control: no-store\" so pages that require authentication are not stored in users browser cache
    - updated the routes that need to be protected
+
+ - 11.7 CSRF (Cross-Site Request Forgery) protection
+   - use of `justinas/nosurf` package for token-based mitigation to handle CSRF risk
+   - created a noSurf handler to handle token mitigation
+   - use the `nosurf.Token()` to get CSRF token and add to the hidden field in our forms
+   - updated the forms by adding the CSRF_token field

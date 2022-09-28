@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/justinas/nosurf"
 )
 
 var current_time = time.Now().Local().Format("01/02/2006 15:04:05")
@@ -63,6 +65,7 @@ func (app *application) recoverPanic(next http.Handler) http.Handler {
 	})
 }
 
+// requireAuthentication redirects an unauthenticated user to login before performing specific actions
 func (app *application) requireAuthentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if !app.isAuthenticated(r) {
@@ -75,4 +78,16 @@ func (app *application) requireAuthentication(next http.Handler) http.Handler {
 
 		next.ServeHTTP(w, r)
 	})
+}
+
+// noSurf protects handlers or forms from CSRF (Cross-site Request Forgery)
+func (app *application) noSurf(next http.Handler) http.Handler {
+	csrfHandler := nosurf.New(next)
+	csrfHandler.SetBaseCookie(http.Cookie{
+		HttpOnly: true,
+		Path: "/",
+		Secure: true,
+	})
+
+	return csrfHandler
 }

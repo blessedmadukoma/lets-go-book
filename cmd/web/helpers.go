@@ -6,10 +6,23 @@ import (
 	"fmt"
 	"net/http"
 	"runtime/debug"
+	"time"
 
 	"github.com/go-playground/form"
+	"github.com/justinas/nosurf"
 )
 
+// Parse current year in all the pages: this can be equivalent to parsing user profile picture or details after log in on all the pages
+func (app *application) newTemplateData(r *http.Request) *templateData {
+	return &templateData{
+		CurrentYear:     time.Now().Year(),
+		Flash:           app.sessionManager.PopString(r.Context(), "flash"),
+		IsAuthenticated: app.isAuthenticated(r),
+		CSRFToken:       nosurf.Token(r),
+	}
+}
+
+// serverError displays if error with server
 func (app *application) serverError(w http.ResponseWriter, err error) {
 	trace := fmt.Sprintf("%s\n%s", err.Error(), debug.Stack())
 	_ = app.errorLog.Output(2, trace)
@@ -17,14 +30,17 @@ func (app *application) serverError(w http.ResponseWriter, err error) {
 	http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 }
 
+// clientError displays if error with client
 func (app *application) clientError(w http.ResponseWriter, status int) {
 	http.Error(w, http.StatusText(status), status)
 }
 
+// notFound displays if not found
 func (app *application) notFound(w http.ResponseWriter) {
 	app.clientError(w, http.StatusNotFound)
 }
 
+// render renders the frontend page or template
 func (app *application) render(w http.ResponseWriter, status int, page string, data *templateData) {
 	ts, ok := app.templateCache[page]
 	if !ok {
@@ -53,6 +69,7 @@ func (app *application) render(w http.ResponseWriter, status int, page string, d
 
 }
 
+// decodePostForm decodes the data sent through a form
 func (app *application) decodePostForm(r *http.Request, dst any) error {
 	err := r.ParseForm()
 	if err != nil {
@@ -77,6 +94,6 @@ func (app *application) decodePostForm(r *http.Request, dst any) error {
 }
 
 // isAuthenticated returns boolean value if a user is logged in or not
-func (app *application) isAuthenticated(r *http.Request) bool  {
+func (app *application) isAuthenticated(r *http.Request) bool {
 	return app.sessionManager.Exists(r.Context(), "authenticatedUserID")
 }
