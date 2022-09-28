@@ -1,5 +1,5 @@
 #### Let's Go Code Implementation - Alex Edwards
-## Chapter 11:
+## Chapter 11 - User Authentication:
  - 11.3 User Sign up
    - added bcrypt package for hashing passwords
    - updated insert method to hash password, check if email is duplicate and either return an error if there is any or continue if clean
@@ -29,3 +29,15 @@
    - created a noSurf handler to handle token mitigation
    - use the \`nosurf.Token()\` to get CSRF token and add to the hidden field in our forms
    - updated the forms by adding the CSRF_token field
+
+## Chapter 12 - Using Request Context:
+ - 12.1 How request context works
+   - Context() can be used to store information during the lifetime of a request
+   - For good practice, we create our own custom type for our context keys
+  
+ - 12.2 Request context for authentication/authorization
+   - updated \`UserModel.Exists()\` method to return boolean if a user with specific ID exists in our \`users\` table or not
+   - created context.go to define a custom context key and is authenticated context key types which provides unique key to store and retrieve authentication status from a request context
+   - created an \`authenticate()\` middleware method to retrieve user's ID from session's data, validate if the user is in the database and update the request context to include the isAuthenticatedContextKey with value true
+   - updated routes.go to include the authenticate() middleware in the dynamic middleware chain
+   - updated isAuthenticated() helper to check the request context to determine if a user is authenticated or not, instead of checking the session data

@@ -403,3 +403,4 @@ Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 POST /user/login
 Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 GET /snippet/create
 Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 GET /static/css/main.css
 Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 GET /static/img/favicon.ico
+-----New Log Session-----
