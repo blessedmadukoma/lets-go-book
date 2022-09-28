@@ -25,7 +25,7 @@
    - updated the routes that need to be protected
 
  - 11.7 CSRF (Cross-Site Request Forgery) protection
-   - use of `justinas/nosurf` package for token-based mitigation to handle CSRF risk
+   - use of \`justinas/nosurf\` package for token-based mitigation to handle CSRF risk
    - created a noSurf handler to handle token mitigation
-   - use the `nosurf.Token()` to get CSRF token and add to the hidden field in our forms
+   - use the \`nosurf.Token()\` to get CSRF token and add to the hidden field in our forms
    - updated the forms by adding the CSRF_token field
