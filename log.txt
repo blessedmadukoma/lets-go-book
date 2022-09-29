@@ -404,3 +404,71 @@ Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 GET /snippet/create
 Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 GET /static/css/main.css
 Time: 09/28/2022 08:54:57, IP: 127.0.0.1:59990 - HTTP/2.0 GET /static/img/favicon.ico
 -----New Log Session-----
+-----New Log Session-----
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /snippet/create
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /user/login
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64271 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/img/favicon.ico
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /user/login
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64271 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /user/login
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64271 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64269 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:31:32, IP: 127.0.0.1:64271 - HTTP/2.0 GET /static/js/main.js
+-----New Log Session-----
+Time: 09/29/2022 10:32:20, IP: 127.0.0.1:64464 - HTTP/2.0 GET /
+Time: 09/29/2022 10:32:20, IP: 127.0.0.1:64464 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:32:20, IP: 127.0.0.1:64464 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:32:20, IP: 127.0.0.1:64466 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:32:20, IP: 127.0.0.1:64464 - HTTP/2.0 GET /static/img/logo.png
+-----New Log Session-----
+Time: 09/29/2022 10:33:00, IP: 127.0.0.1:64635 - HTTP/2.0 GET /
+Time: 09/29/2022 10:33:00, IP: 127.0.0.1:64635 - HTTP/2.0 GET /static/css/main.css
+-----New Log Session-----
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/css/
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64778 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/29/2022 10:33:35, IP: 127.0.0.1:64904 - HTTP/2.0 GET /static/js/main.js
+-----New Log Session-----
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49598 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49598 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /user/signup
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49598 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /user/login
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49598 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/img/logo.png
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/css/main.css
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49598 - HTTP/2.0 GET /static/js/main.js
+Time: 09/29/2022 10:38:21, IP: 127.0.0.1:49596 - HTTP/2.0 GET /static/img/logo.png

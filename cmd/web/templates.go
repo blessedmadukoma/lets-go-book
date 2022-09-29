@@ -2,8 +2,10 @@ package main
 
 import (
 	"html/template"
+	"io/fs"
 	"path/filepath"
 	"snippetbox/internal/models"
+	"snippetbox/ui"
 	"time"
 )
 
@@ -31,7 +33,8 @@ func newTemplateCache() (map[string]*template.Template, error) {
 	cache := map[string]*template.Template{}
 
 	// Get all files matching the *.html extension
-	pages, err := filepath.Glob("./ui/html/pages/*.html")
+	// pages, err := filepath.Glob("./ui/html/pages/*.html")
+	pages, err := fs.Glob(ui.Files, "html/pages/*.html")
 	if err != nil {
 		return nil, err
 	}
@@ -40,20 +43,14 @@ func newTemplateCache() (map[string]*template.Template, error) {
 	for _, page := range pages {
 		name := filepath.Base(page)
 
-		// register the global variable functions before calling the ParseFiles method
-		ts, err := template.New(name).Funcs(functions).ParseFiles("./ui/html/base.html")
-		if err != nil {
-			return nil, err
+		// slice containing the filepath patterns for the templates we want to parse
+		patterns := []string {
+			"html/base.html",
+			"html/partials/*.html",
+			page,
 		}
 
-		// parse all .html file in partials folder into the template set
-		ts, err = ts.ParseGlob("./ui/html/partials/*.html")
-		if err != nil {
-			return nil, err
-		}
-
-		// Parse the page template to this template set ts
-		ts, err = ts.ParseFiles(page)
+		ts, err := template.New(name).Funcs(functions).ParseFS(ui.Files, patterns...)
 		if err != nil {
 			return nil, err
 		}

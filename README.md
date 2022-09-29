@@ -41,3 +41,9 @@
    - created an \`authenticate()\` middleware method to retrieve user's ID from session's data, validate if the user is in the database and update the request context to include the isAuthenticatedContextKey with value true
    - updated routes.go to include the authenticate() middleware in the dynamic middleware chain
    - updated isAuthenticated() helper to check the request context to determine if a user is authenticated or not, instead of checking the session data
+
+## Chapter 13 - Optional Go features:
+ - 13.1 Using embedded files
+   - embedded the \`ui\` package containing our HTML, CSS, Images and JS files
+   - updated routes.go to serve our CSS, JS and Images from the embedded file system, instead from disk at runtime
+   - updated templates.go so our template cache uses the embeded HTML, instead of reading from disk
