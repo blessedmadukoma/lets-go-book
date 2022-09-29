@@ -47,3 +47,17 @@
    - embedded the \`ui\` package containing our HTML, CSS, Images and JS files
    - updated routes.go to serve our CSS, JS and Images from the embedded file system, instead from disk at runtime
    - updated templates.go so our template cache uses the embeded HTML, instead of reading from disk
+
+ - 13.2 Using generics (parametric polymorphism)
+   - When to consider using generics:
+     - Writing repeated boilerplate code for different data types e.g. common operations on slices, maps or channels, or helpers for carrying out validation checks or test assertions on different data types.
+     - reaching for the any (empty interface{}) type. Example: creating a data structure (queue, cache or linked list) which needs to operate on different types.
+   - when NOT to use generics:
+     - if it makes the coder harder to understand or less clear.
+     - if all the types needed to work with have a common set of methods - best to define and use a normal interface type instead.
+     - just because you can
+
+   - Writing tests in the next chapter would make us write a lot of duplicate boilerplate code.
+  
+   - converted PermittedInt() in validator.go to a generic function - to not only check int values, but other set of allowed values (string, int, float64 or any other comparable type).
+   - updated snippetCreatePost() method handler to use the PermittedValue() in validation checks
